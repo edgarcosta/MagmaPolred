@@ -10,9 +10,20 @@ This provides the following intrinsics
 - `intrinsic Polredbest(K::Fld) -> FldNum, Map, BoolElt`
 - `intrinsic Polredbestabs(K::Fld) -> RngUPolElt, Map, BoolElt`
 
-Documentation: http://pari.math.u-bordeaux.fr/dochtml/html-stable/General_number_fields.html#polredabs
 
-Example:
+## Prerequisites
+
+For optimal results, set your Pari stack size to a decent size by for example adding
+```
+parisize = "4096M"
+```
+to your `~/.gprc` file. This is an optional improvement.
+
+## Documentation
+See the official `gp/pari` documentation webpage:
+http://pari.math.u-bordeaux.fr/dochtml/html-stable/General_number_fields.html#polredabs
+
+## Examples
 
 ```
 > AttachSpec("spec");
