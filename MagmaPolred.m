@@ -72,7 +72,7 @@ intrinsic Polred(K::Fld : Best:="dynamic") -> FldNum, Map, BoolElt
   if Type(K) eq FldRat then
     return K, hom< K -> K | >;
   else
-    fredabs, fredabs_root, bl := Polredabs(DefiningPolynomial(K) : Best:=Best);
+    fredabs, fredabs_root, bl := Polred(DefiningPolynomial(K) : Best:=Best);
     if IsZero(fredabs) then
         return K, hom<K -> K | K.1>, false;
     end if;
@@ -82,7 +82,7 @@ intrinsic Polred(K::Fld : Best:="dynamic") -> FldNum, Map, BoolElt
   end if;
 end intrinsic;
 
-intrinsic Polredbest(K::Fld) -> FldNum, Map, BoolElt
+intrinsic Polredabs(K::Fld) -> FldNum, Map, BoolElt
   { A smallest generating polynomial of the number field, using polredabs in pari. }
   return Polred(K : Best:=false);
 end intrinsic;
